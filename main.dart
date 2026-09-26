@@ -1,8 +1,8 @@
 void main() {
   print('=== INVENTARIS TOKO ===');
-  String nama = 'Shelly Scoot';
+  String nama = 'Ahyeon';
   int umur = 21;
-  double tinggi = 1.68;
+  double tinggi = 1.50;
 
   print(nama);
   print(umur);
@@ -22,8 +22,8 @@ void main() {
   print(userID);
   print(userIDTime);
 
-  const double panjangKabel = 2.50;
-  const String namaKabel = "Eterna 2x1.5";
+  const double panjangKabel = 1.00;
+  const String namaKabel = "Kabel Type-C";
 
   print(panjangKabel);
   print(namaKabel);
@@ -46,9 +46,9 @@ void main() {
 
   Set<String> pakaianPria = {};
 
-  pakaianPria.add('Rompi Safety');
-  pakaianPria.add('Helm Proyek');
-  pakaianPria.add('Sarung Tangan');
+  pakaianPria.add('Hoodie CHMB');
+  pakaianPria.add('Baju Chambre de la vain');
+  pakaianPria.add('Celana Baggy CHMB');
 
   print(pakaianPria);
 

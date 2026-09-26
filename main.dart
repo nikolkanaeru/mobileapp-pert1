@@ -1,54 +1,55 @@
 void main() {
   print('=== 1. EXPLICIT TYPING & MUTABILITY ===');
-  String productName = 'Kopi Susu Gula Aren';
-  int stock = 25;
-  double price = 18000.0;
-  bool isAvailable = true;
+  // Variabel kostum tema inventaris/parabot
+  String namaBarang = 'Sapu Ijuk Premium';
+  int stokBarang = 45;
+  double hargaBarang = 25000.0;
+  bool isTersedia = true;
 
-  print('Produk: $productName');
-  print('Stok Awal: $stock');
-  print('Harga: Rp$price');
-  print('Tersedia: $isAvailable');
+  print('Nama Barang: $namaBarang');
+  print('Stok Awal: $stokBarang unit');
+  print('Harga Satuan: Rp$hargaBarang');
+  print('Status Tersedia: $isTersedia');
 
-  // Mengubah nilai variabel mutable
-  stock = 30;
-  print('Stok Setelah Update: $stock\n');
+  // Perubahan nilai variabel (mutable)
+  stokBarang = 60;
+  print('Stok Setelah Penambahan: $stokBarang unit\n');
 
   print('=== 2. SOUND NULL SAFETY ===');
   // Non-nullable variable
-  String storeName = 'Kedai Kopi Digital';
+  String namaGudang = 'Gudang Pusat Parabot';
   
   // Nullable variable (?)
-  String? customerNote;
+  String? catatanPengiriman;
   
-  // Null-aware operator (??) untuk nilai alternatif
-  String noteToPrint = customerNote ?? 'Tidak ada catatan khusus';
-  print('Toko: $storeName');
-  print('Catatan Pelanggan: $noteToPrint');
+  // Null-aware operator (??) untuk nilai default
+  String cetakCatatan = catatanPengiriman ?? 'Tidak ada catatan pengiriman';
+  print('Lokasi: $namaGudang');
+  print('Catatan Awal: $cetakCatatan');
 
   // Mengisi data nullable
-  customerNote = 'Less ice, extra espresso';
-  noteToPrint = customerNote ?? 'Tidak ada catatan khusus';
-  print('Catatan Diperbarui: $noteToPrint\n');
+  catatanPengiriman = 'Kirim sebelum jam 4 sore, bungkus bubble wrap';
+  cetakCatatan = catatanPengiriman ?? 'Tidak ada catatan pengiriman';
+  print('Catatan Diperbarui: $cetakCatatan\n');
 
   print('=== 3. IMMUTABILITY (final vs const) ===');
-  final DateTime orderTime = DateTime.now(); 
-  const double taxRate = 0.11; 
+  final DateTime waktuInput = DateTime.now(); // Runtime constant
+  const double diskonMember = 0.05; // Compile-time constant (5%)
 
-  print('Waktu Transaksi: $orderTime');
-  print('Pajak (PPN 11%): ${taxRate * 100}%');
+  print('Waktu Transaksi: $waktuInput');
+  print('Besar Diskon Member: ${diskonMember * 100}%');
 
-  double totalPrice = price + (price * taxRate);
-  print('Total Bayar: Rp$totalPrice\n');
+  double totalHarga = hargaBarang - (hargaBarang * diskonMember);
+  print('Total Harga Setelah Diskon: Rp$totalHarga\n');
 
   print('=== 4. LIST & STRING INTERPOLATION ===');
-  List<String> menuItems = ['Kopi Hitam', 'Kopi Susu', 'Teh Tarik'];
+  List<String> daftarKategori = ['Peralatan Dapur', 'Peralatan Kebersihan', 'Pertukangan'];
   
-  // Menambahkan item ke List
-  menuItems.add('Matcha Latte');
+  // Menambahkan item baru ke List
+  daftarKategori.add('Elektronik Rumah');
 
-  print('Daftar Menu Kopi (${menuItems.length} item):');
-  for (int i = 0; i < menuItems.length; i++) {
-    print('${i + 1}. ${menuItems[i]}');
+  print('Daftar Kategori Produk (${daftarKategori.length} item):');
+  for (int i = 0; i < daftarKategori.length; i++) {
+    print('${i + 1}. ${daftarKategori[i]}');
   }
 }

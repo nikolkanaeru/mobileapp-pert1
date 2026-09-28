@@ -7,7 +7,7 @@ NAMA: MUHAMAD AZMI MA'MUN
 
 ```dart
 void main() {
-  print('=== DATA INVENTARIS TOKO ===');
+  print('=== INVENTARIS TOKO ===');
   String nama = 'Ahyeon';
   int umur = 21;
   double tinggi = 1.50;
@@ -24,14 +24,14 @@ void main() {
 
   print(status.toUpperCase());
 
-  final String userID = "PRBT994";
+  final String userID = "PRBT001";
   final DateTime userIDTime = DateTime.now();
 
   print(userID);
   print(userIDTime);
 
-  const double panjangKabel = 2.50;
-  const String namaKabel = "Kabel Type-C USB";
+  const double panjangKabel = 1.00;
+  const String namaKabel = "Kabel Type-C";
 
   print(panjangKabel);
   print(namaKabel);
@@ -43,9 +43,9 @@ void main() {
   print(isVerified);
 
   List<String> namaProduk = [
-    'Sapu Ijuk',
+    'Sapu Lidi',
     'Ember Plastik',
-    'Cangkul Baja'
+    'Cangkul'
   ];
 
   print(namaProduk);
@@ -54,15 +54,15 @@ void main() {
 
   Set<String> pakaianPria = {};
 
-  pakaianPria.add('Rompi Safety');
-  pakaianPria.add('Helm Proyek');
-  pakaianPria.add('Sarung Tangan');
+  pakaianPria.add('Hoodie CHMB');
+  pakaianPria.add('Baju Chambre de la vain');
+  pakaianPria.add('Celana Baggy CHMB');
 
   print(pakaianPria);
 
   Map<String, dynamic> customer = {
-    'nama' : 'Budi Santoso',
-    'umur' : 40,
+    'nama' : 'Park Jonggun',
+    'umur' : 25,
     'status' : 'lunas'
   };
 
@@ -70,8 +70,8 @@ void main() {
   print(customer['umur']);
   print(customer['status']);  
 
-  Object data = 'Budi Santoso';
-  data = 40;
+  Object data = 'Park Jonggun';
+  data = 25;
   data = true;
 
   if (data is String){
